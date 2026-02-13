@@ -1,0 +1,15 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffccd5; /* soft romantic pink */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
