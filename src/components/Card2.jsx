@@ -3,11 +3,11 @@ import '../Card2.css'
 import { useState } from 'react'
 
 function Card2(props) {
-  const [noButtonPos , setnoButtonPos] = useState({top : "0 px", left : "0 px"})
+  const [noButtonPos , setNoButtonPos] = useState({top : "0px", left : "0px"})
   function moveNoButton(){
     const x= Math.random() *200 -100
     const y= Math.random() *200 -100
-    setnoButtonPos({
+    setNoButtonPos({
       top : `${x}px`,
       left : `${y}px`
     })
@@ -22,7 +22,7 @@ function Card2(props) {
         </div>
         <div className='btn-div'>
             <button className='btn' onClick={()=> props.handleYes()}> Yes ❤️ </button>
-            <button className='btn' style ={{transform : `translate(${noButtonPos.top},${noButtonPos.left})`}} onMouseEnter={moveNoButton} > No 💔</button>
+            <button className='btn' style ={{transform : `translate(${noButtonPos.top},${noButtonPos.left})`}} onMouseEnter={moveNoButton} onClick={(e)=> e.preventDefault()} > No 💔</button>
         </div>
       
     </div>
